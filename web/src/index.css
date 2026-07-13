@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-stone: #f0f0ec;
+  --color-stone-raised: #e6e5df;
+  --color-ink: #17181b;
+  --color-ink-muted: #63666b;
+  --color-ink-faint: #8b8d8f;
+  --color-accent: #9c6b37;
+  --color-accent-strong: #7e5527;
+  --color-accent-tint: #9c6b371a;
+  /* Two-font system: Playfair Display carries emotional headlines only,
+     Inter carries everything else (body copy, labels, technical data).
+     Two weights total — 400 and 600 — no in-between. */
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  background: var(--color-stone);
+  /* Deliberately not scroll-behavior: smooth — it decouples visual scroll
+     from wheel input, which fights the scroll-tied 3D rotation in the
+     hero. See PRD §07: never alter native scroll speed. */
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: var(--color-stone);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Guarantees centering on all container widths regardless of any build
+   config conflicts that could otherwise cause mx-auto to fail silently. */
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.w-full {
+  width: 100% !important;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #fbf9f5;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.font-mono-tab {
+  font-family: var(--font-body);
+  font-variant-numeric: tabular-nums;
+}

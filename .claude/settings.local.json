@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(\"/c/Program Files/Blender Foundation/Blender 5.1/blender.exe\" --background \"D:\\\\Code\\\\RelapseGFX\\\\Mr. autosallon\\\\assets\\\\porsche.blend\" --python \"C:\\\\Users\\\\albim\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Code-RelapseGFX-Mr--autosallon\\\\14869d53-54a8-452b-abcd-6d524652a904\\\\scratchpad\\\\inspect_mat.py\")"
+    ]
+  }
+}
